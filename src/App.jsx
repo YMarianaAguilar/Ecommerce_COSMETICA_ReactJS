@@ -1,27 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/navBar/NavBar";
-import ItemListContainer from "./components/itemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
+import { ItemDetailContainer, ItemListContainer } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
 
-// Componentes de ejemplo
-const About = () => <h2>About</h2>;
-const Contact = () => <h2>Contact</h2>;
-
-
-
-export default function App() {
+const App = () => {
   return (
-      
-      <Router>
-        <NavBar />
-        <Routes>
-          {/* Definir las rutas */}
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:id" element={<ItemListContainer />} />
-          <Route path="/item/:id" element={<ItemDetailContainer/>} />
-        </Routes>
-      </Router>
-  
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a C O S M E T I C A"} />} />
+        <Route path="/category/:category" element={<ItemListContainer greeting={"Bienvenidos a C O S M E T I C A"} />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+
+export default App;
