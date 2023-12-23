@@ -1,40 +1,31 @@
-import { useEffect, useState } from "react";
-import { getProducts } from "../../asyncMock";
+import { useContext, useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { FirebaseContext } from '../../context/FirebaseContext';
 
 export const ItemListContainer = ({ greeting }) => {
   const { category } = useParams();
-
-  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const { getProductsDB, products } = useContext(FirebaseContext);
 
   useEffect(() => {
-
-    setIsLoading(true); 
-    getProducts()
-      .then((resp) => {
-        if(category) {
-        const productsFilter = resp.filter(product => product.category === category);
-        setProducts(productsFilter);
-        setIsLoading(false);
-        
-        } else {
-          setProducts(resp);
-        setIsLoading(false);
-          
-        }
- 
-      })
-      .catch((error) => console.log(error));
-  }, [category]); 
+    setIsLoading(true);
+    getProductsDB(category)
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
+  }, [category]);
 
 
   return (
     <>
       <div> {greeting} </div>
-      { isLoading ? <h2>Buscando Stock ...</h2> : <ItemList products={products} /> }
+      {
+        isLoading ? <h2>Buscando Stock ...</h2> : 
+        <>
+        {/* <p>{JSON.stringify(products)}</p> */}
+        <ItemList products={products} />
+        </>
+      }
     </>
   );
 };

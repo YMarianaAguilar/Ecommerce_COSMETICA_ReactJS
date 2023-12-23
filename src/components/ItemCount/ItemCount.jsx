@@ -18,6 +18,10 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
     setCount(count - 1);
   };
 
+  const handleOnAdd = () => {
+    onAdd(count);
+    setCount(0);
+  };
 
   return (
     <div className="border  p-4">
@@ -31,7 +35,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
         </button>
       </div>
       <button type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" onClick={() => onAdd(count)}>Agregar al carrito</button>
+            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" onClick={handleOnAdd}>Agregar al carrito</button>
     </div>
   );
 };

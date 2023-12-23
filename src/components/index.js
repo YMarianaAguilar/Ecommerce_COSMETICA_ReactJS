@@ -1,11 +1,12 @@
-export * from './CartWidget/CartWidget';
+export * from './Cart/Cart';
+export * from './cartWidget/CartWidget';
 export * from './Item/Item';
 export * from './ItemCount/ItemCount';
 export * from './ItemDetail/ItemDetail';
-export * from './ItemDetailContainer/ItemDetailContainer';
+export * from './itemDetailContainer/ItemDetailContainer';
 export * from './ItemList/ItemList';
-export * from './ItemListContainer/ItemListContainer';
-export * from './NavBar/NavBar';
+export * from './itemListContainer/ItemListContainer';
+export * from './navBar/NavBar';
 export * from './index';
 
 
