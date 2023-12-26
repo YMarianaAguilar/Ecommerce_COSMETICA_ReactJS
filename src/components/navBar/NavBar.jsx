@@ -27,9 +27,9 @@ const NavBar = () => {
             </Link>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <Link to={"/"} className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">HOME</Link>
-                <Link to={"/category/perfumes"} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">PERFUMES</Link>
-                <Link to={"/category/maquillaje"} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">MAQUILLAJE</Link>
+                <Link to={"/"} className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
+                <Link to={"/category/perfumes"} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Perfumes</Link>
+                <Link to={"/category/maquillaje"} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Maquillaje</Link>
               </div>
             </div>
           </div>
@@ -42,8 +42,8 @@ const NavBar = () => {
       <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           <Link to={"/"} className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</Link>
-          <Link to={"/category/perfumes"} className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">PERFUMES</Link>
-          <Link to={"/category/maquillaje"} className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">MAQUILLAJE</Link>
+          <Link to={"/category/perfumes"} className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Perfumes</Link>
+          <Link to={"/category/maquillaje"} className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Maquillaje</Link>
         </div>
       </div>
     </nav>

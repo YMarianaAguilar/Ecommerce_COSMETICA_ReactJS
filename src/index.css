@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  background-color: #acc3c6;
   font-family: sans-serif;
   line-height: 1.5;
   height: 100vh;
@@ -34,10 +35,11 @@ section{
   padding: 4rem 0 3rem;
 }
 
-a, span, p {
+a, span, p{
   color: var(--color-text);
   font-size: .9rem;
 }
+
 
 .title {
   text-align: center;
@@ -68,4 +70,19 @@ a, span, p {
  background: #3c4268;
  height: .2rem;
  width: 2rem;
+}
+
+h3 {
+  color:beige;
+}
+
+h5{
+  color: rgb(28, 49, 42);
+  font-weight:bold;
+}
+
+p{
+  color: rgb(28, 49, 42);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
